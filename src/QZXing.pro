@@ -16,9 +16,13 @@
 
 include(QZXing.pri)
 
-VERSION = 2.3
+#VERSION = 2.3
 
+CONFIG(debug, debug|release) {
+TARGET = QZXingd
+} else {
 TARGET = QZXing
+}
 TEMPLATE = lib
 
 # CONFIG += staticlib
